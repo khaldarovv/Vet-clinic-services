@@ -1,0 +1,531 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-display: swap;
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/FuturaPT-Book.woff2") format("woff2"),
+    url("./fonts/FuturaPT-Book.woff") format("woff");
+    
+}
+@font-face {
+    font-display: swap;
+    font-family: "Futura PT";
+    font-weight: 500;
+    src: url("./fonts/FuturaPT-Medium.woff2") format("woff2"),
+    url("./fonts/FuturaPT-Medium.woff") format("woff");
+    
+}
+@font-face {
+    font-display: swap;
+    font-family: "Futura PT";
+    font-weight: 700;
+    src: url("./fonts/FuturaPT-Bold.woff2") format("woff2"),
+    url("./fonts/FuturaPT-Bold.woff") format("woff");
+}
+body {
+    margin: 0;
+    font-family: "Futura PT";
+    font-weight: 400;
+    background-image: url(./images/backgroundimage.png);
+    background-color: #f9f9f9;
+}
+img {
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/* header site */
+.container-header {
+    width: 1360px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header-site {
+    padding-bottom: 146px;
+    position: relative;
+    z-index: 5;
+}
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 12px;
+    padding-bottom: 14px;   
+    background-color: #F9F8F8;     
+}
+.address-link {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 106px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+.address-link:hover {
+    color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.address-link:hover {
+    opacity: 0.6;
+}
+.contact-address-link {
+    margin-right: 106px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+.address-link::before {
+    content: url(./images/addressicon.svg);
+    margin-right: 9px;
+}
+.tel-number-list {
+    display: flex;
+    margin: 0px;
+    margin-right: 98px;
+    padding: 0px;
+    list-style: none;
+    gap: 13px;
+}
+.tel-number-item-middle {
+    display: inline-flex;
+    align-items: center;
+}
+.tel-number-first::before {
+    content: url(./images/telicon.svg);
+    margin-right: 9px;
+}
+.tel-number-item-middle::before {
+    content: url(./images/ellipse.svg);
+    margin-right: 9px;
+}
+.tel-number-item-middle::after {
+    content: url(./images/ellipse.svg);
+    margin-left: 9px;
+}
+.tel-number {
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.tel-number:hover {
+    color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.tel-number:active {
+    opacity: 0.6;
+}
+.time-list {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.time-item {
+    margin-right: 17px;
+}
+.date-text {
+    color: #333;
+    font-family: Futura PT;
+    font-size: 14px;
+    line-height: normal;
+}
+.date-text-first::before {
+    content: url(./images/dateicon.svg);
+    margin-right: 7px;
+}
+.time-item:nth-child(2) {
+    margin-right: 0px;
+}
+.time-text {
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+/* header bottom  */
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: #fff;
+}
+.vetclinic-logo {
+    position: absolute;
+    top: calc(50% - 50px);
+    /* right: calc(50% + 540px); */
+}
+.vetclinic-logo:hover {
+    opacity: 0.8;
+}
+.vetclinic-logo:active {
+    opacity: 0.6;
+}
+.nav-link-first::before {
+    content: url(./images/fishicon.svg);
+    margin-right: 12px;
+}
+.navbar {
+    margin-right: 200px;
+    margin-left: auto;    
+}
+.nav-link {
+    display: inline-flex; 
+    align-items: center;
+    margin-right: 55px;
+    color: #333;
+    font-size: 16px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.nav-link:hover {
+    border-bottom: 5px solid #fafa33;
+    transition: color, 0.1s ease;
+}
+.nav-link:active {
+    opacity: 0.6;
+}
+.nav-link-end {
+    margin-right: 0px;
+}
+.send-question-button {
+    display: inline-flex;
+    align-items: center;
+    color: #333;
+    text-align: right;
+    font-size: 16px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.send-question-button:hover {
+    color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.send-question-button:active {
+    opacity: 0.6;
+}
+.send-question-button::before {
+    content: url(./images/peticon.svg);
+}
+/* section hero */
+.container-hero {
+    width: 1360px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section-hero-wrap {
+    display: flex;
+}
+.section-hero__title-wrap {
+    margin-left: 120px;
+    margin-right: 388px;
+}
+.hero__title {
+    margin: 0px;
+    margin-bottom: 21px;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+}
+.hero__text-wrap {
+    width: 447px;
+}
+.hero__text {
+    margin: 0px;
+    color: #949494;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.hero__img {
+    margin-top: -150px;
+}
+/* list  */
+.hero__service__list-wrap {
+    padding-bottom: 134px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero__service__list {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    column-gap: 30px;
+    list-style: none;
+}
+.hero__service-item {
+    flex-direction: column;
+    margin-bottom: 34px;
+    padding: 58px 22px 45px 53px;
+    width: 305px;
+    border-radius: 5px 5px 0px 0px;
+    background: #fff;
+}
+.hero__service-item:hover {
+    -webkit-box-shadow: 0px 4px 20px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 4px 20px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 4px 20px 0px rgba(34, 60, 80, 0.2);;
+}
+.hero__service-item:nth-child(7n) {
+    margin-bottom: 0px;
+}
+.hero__item-title {
+    margin: 0px;
+    margin-bottom: 14px;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 34px;
+}
+.hero__item-title::before {
+    content: url(images/doctoricon.svg);
+    display: flex;
+    margin-bottom: 21px;
+}
+.hero__item-title--2::before {
+    content: url(images/doctorsicon.svg);
+    display: flex;
+}
+.hero__item-title--3::before {
+    content: url(images/dogicon.svg);
+    display: flex;
+}
+.hero__item-title--4::before {
+    content: url(images/dogsicon.svg);
+    display: flex;
+}
+.hero__item-title--5::before {
+    content: url(images/lupaicon.svg);
+    display: flex;
+}
+.hero__item-title--6::before {
+    content: url(images/dogticon.svg);
+    display: flex;
+}
+.hero__item-title--7::before {
+    content: url(images/uziic.svg);
+    display: flex;
+}
+.hero__item-title--8::before {
+    content: url(images/chipic.svg);
+    display: flex;
+}
+.hero__item-title--9::before {
+    content: url(images/pasportic.svg);
+    display: flex;
+}
+.hero__item-title--10::before {
+    content: url(images/vacsinationic.svg);
+    display: flex;
+}
+.hero__item-title--11::before {
+    content: url(images/stomeic.svg);
+    display: flex;
+}
+.hero__item-title--12::before {
+    content: url(images/callhomeic.svg);
+    display: flex;
+}
+.item-text-wrap {
+    width: 229px;
+    margin-bottom: 26px;
+}
+.hero__item-text {
+    margin: 0px;
+    color: #949494;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.hero__item-link {
+    padding: 14px 29px;
+    color: #fff;
+    text-align: center;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+    border-radius: 3px;
+    background: #78c0de;
+    text-decoration: none;
+}
+.hero__item-link--yellow {
+    background: #ffbd54;
+}
+.hero__item-link:hover {
+    background-color: #000;
+    transition: color, 0.4s ease;
+}
+.hero__item-link:active {
+    opacity: 0.6;
+}
+/* footer site */
+.footer-site {
+    padding: 54px 65px 23px 65px;
+    background-color: #f3f3f3;
+}
+.container-footer {
+    width: 1360px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 28px;
+    align-items: center;
+}
+.footer-vetclinic-logo:hover {
+    opacity: 0.8;
+}
+.footer-vetclinic-logo:active {
+    opacity: 0.6;
+}
+.footer-address-wrap {
+    display: flex;
+}
+.footer-list-wrap {
+    display: flex;
+}
+.footer-nav-list {
+    margin: 0px;
+    margin-right: 87px;
+    padding: 0px;
+    list-style: none;
+}
+.footer-nav-list-end {
+    margin-right: 0px;
+}
+.footer-nav-item {
+    margin-bottom: 14px;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.footer-nav-item:hover {
+    color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.footer-nav-item:active {
+    opacity: 0.6;
+}
+.footer-nav-item-end {
+    margin-bottom: 0px;
+}
+.footer-time-list {
+    margin: 0px;
+    margin-right: 112px;
+    padding: 0px;
+    list-style: none;
+}
+.footer-date-text {
+    color: #333;
+    font-family: Futura PT;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+}
+.footer-date-text-first::before {
+    content: url(./images/dateicon.svg);
+    margin-right: 14px;
+}
+.footer-date-text-sec {
+    margin-left: 32px;
+}
+.footer-address-link {
+    color: #333;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.footer-address-link:hover {
+    color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.footer-address-link:active {
+    opacity: 0.6;
+}
+.footer-address-link-wrap {
+    width: 157px;
+    margin-right: 87px;
+}
+.footer-address-link-wrap::before {
+    display: inline-flex;   
+    content: url(./images/addressicon.svg);
+    margin-right: 9px;
+}
+.footer_tel_number_list_wrap {
+    display: inline-flex;
+}
+.footer_tel_number_list_wrap::before {
+    content: url(images/telicon.svg);
+    margin-right: 9px;
+}
+.footer-tel-number-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.copyright-site {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 23px;
+    color: #5c5c5c;
+    text-align: right;
+    font-family: Futura PT;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
